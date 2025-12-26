@@ -3,7 +3,7 @@ name: Genrate ASCII Artwork
 on: push
 
 jobs:
-  first_job:
+  ascii_job:
     runs-on: ubuntu-latest
     steps:
       - name: check out
@@ -14,5 +14,6 @@ jobs:
 
       - name: executeing shell script
         run: |
-         chmod 777 ascii-script.sh
+         chmod +x guntagari-creator/actions-1/.github/workflows/ascii-script.sh
          ./ascii-script.sh
+         
