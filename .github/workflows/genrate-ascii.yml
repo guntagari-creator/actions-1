@@ -14,6 +14,6 @@ jobs:
 
       - name: executeing shell script
         run: |
-         chmod +x guntagari-creator/actions-1/.github/workflows/ascii-script.sh
+         sudo chmod +x ./ascii-script.sh
          ./ascii-script.sh
          
