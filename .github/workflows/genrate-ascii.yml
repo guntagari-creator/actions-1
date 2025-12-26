@@ -10,14 +10,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install cowsay program
-        run: |
-          sudo apt-get install cowsay -y
+        run: sudo apt-get install cowsay -y
         
       - name: genrate ACII artwork
-        run: cowsay -f dargon "Run for cover, I am a Dragon....RAWR" >> dragon.txt
+        run: cowsay -f dargon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
       - name: Test file exists
-        run: |
-          grep -i ''dragon" dragon.txt 
-          cat dragon.txt
-          ls
+        run: grep -i "dragon" dragon.txt 
+      
+      - name: read file
+        run: cat dragon.txt
+      - name: List Repo files
+        run: ls -ltra
