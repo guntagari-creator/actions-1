@@ -12,8 +12,9 @@ jobs:
       - name: Install cowsay program
         run: sudo apt-get install cowsay -y
         
-      - name: genrate ACII artwork
-        run: cowsay -f dargon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+      - name: generate ASCII artwork
+        run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+
 
       - name: Test file exists
         run: grep -i "dragon" dragon.txt 
