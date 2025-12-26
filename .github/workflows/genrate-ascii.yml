@@ -14,6 +14,6 @@ jobs:
 
       - name: executeing shell script
         run: |
-         chmod +x guntagari-creator/actions-1/.github/workflows/script.sh
-         guntagari-creator/actions-1/.github/workflows/script.sh
+         chmod +x .github/workflows/script.sh
+         .github/workflows/script.sh
          
