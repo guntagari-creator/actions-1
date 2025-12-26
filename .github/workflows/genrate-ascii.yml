@@ -1,0 +1,23 @@
+name: Genrate ASCII Artwork
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out
+        uses: actions/checkout@v3
+
+      - name: Install cowsay program
+        run: |
+          sudo apt-get install cowsay -y
+        
+      - name: genrate ACII artwork
+        run: cowsay -f dargon "Run for cover, I am a Dragon....RAWR" >> dragon.txt
+
+      - name: Test file exists
+        run: |
+          grep -i ''dragon" dragon.txt 
+          cat dragon.txt
+          ls
